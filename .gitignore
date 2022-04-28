@@ -1,0 +1,14 @@
+node_modules
+coverage
+npm-debug.log
+yarn-error.log
+.nyc_output
+coverage.lcov
+dist
+.DS_Store
+.env
+.yalc
+yalc.lock
+package-lock.json
+.idea
+pnpm-lock.yaml
