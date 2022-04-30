@@ -1,5 +1,6 @@
 import test from "ava";
 import { Stack } from "./stack.js";
+import {MyObj} from "../../util.js";
 
 test("stack: empty", (t) => {
   const stack = new Stack();
@@ -134,16 +135,6 @@ test('Stack: returns toString primitive types', t => {
 
 test('Stack: returns toString objects', t => {
   const stack = new Stack();
-  class MyObj {
-    constructor(el1, el2) {
-      this.el1 = el1;
-      this.el2 = el2;
-    }
-
-    toString() {
-      return `${this.el1.toString()}|${this.el2.toString()}`;
-    }
-  }
   t.is(stack.toString(), '')
 
   stack.push(new MyObj(1, 2));

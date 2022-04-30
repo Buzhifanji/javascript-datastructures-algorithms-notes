@@ -64,7 +64,7 @@ class Deque {
      * @returns {undefined|*}
      */
     peekFront = () => {
-        if(this.isEmpty()) {
+        if (this.isEmpty()) {
             return undefined
         }
         return this.items[this.lowestCount]
@@ -74,7 +74,7 @@ class Deque {
      * @returns {undefined|*}
      */
     peepBack = () => {
-        if(this.isEmpty()) {
+        if (this.isEmpty()) {
             return undefined
         }
         return this.items[this.count - 1]

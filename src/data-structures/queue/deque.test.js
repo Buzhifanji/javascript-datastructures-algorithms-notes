@@ -1,5 +1,6 @@
 import test from "ava";
 import {Deque} from "./deque.js";
+import {MyObj} from "../../util.js";
 
 test('Deque: empty', it => {
     const deque = new Deque()
@@ -204,16 +205,6 @@ test('Deque: returns toString primitive types', it => {
 })
 
 test('Deque: returns toString objects', it => {
-    class MyObj {
-        constructor(el1, el2) {
-            this.el1 = el1;
-            this.el2 = el2;
-        }
-
-        toString() {
-            return `${this.el1.toString()}|${this.el2.toString()}`;
-        }
-    }
     const deque = new Deque()
     it.is(deque.toString(), '')
 

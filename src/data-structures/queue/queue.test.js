@@ -1,5 +1,6 @@
 import test from "ava";
 import {Queue} from "./queue.js";
+import {MyObj} from "../../util.js";
 
 test('Queue: empty', t => {
     const queue = new Queue();
@@ -163,16 +164,6 @@ test('Queue: returns toString primitive types', it => {
 })
 
 test('Queue: returns toString objects', it => {
-    class MyObj {
-        constructor(el1, el2) {
-            this.el1 = el1;
-            this.el2 = el2;
-        }
-
-        toString() {
-            return `${this.el1.toString()}|${this.el2.toString()}`;
-        }
-    }
     const queue = new Queue();
     it.is(queue.toString(), '')
 
